@@ -176,7 +176,12 @@ touch launch/reactive_robot.launch
 
     <!-- Py script-->
     <node pkg="reactive_robot" type="reactive.py" name="reactive_robot_teleop" output="screen" />
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find reactive_robot)/rviz/config.rviz" required="true" />
+
 </launch>
+
+
 
 ```
 
@@ -196,7 +201,7 @@ source devel/setup.bash
 
 ## 9-Run the Launch File
 ```
-roslaunch reactive_robot_sim reactive_robot_sim.launch
+roslaunch reactive_robot reactive_robot.launch
 ```
 
 ![the end](https://github.com/ze21-dot/ROVER/blob/main/rover.jpg.png?raw=true)
